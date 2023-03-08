@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1_from_basic/pages/login_page.dart';
+import 'package:flutter_application_1_from_basic/utils/routes.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
@@ -8,6 +10,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,11 +18,13 @@ class MyApp extends StatelessWidget {
 
       //if we want to give property in light mode
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple,
-      fontFamily:GoogleFonts.lato().fontFamily,
-      // primaryTextTheme: GoogleFonts.latoTextTheme()
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily:GoogleFonts.lato().fontFamily,
+        // primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
 
+    debugShowCheckedModeBanner: false,
 
       //it is for dark mode
       // home: HomePage(),
@@ -31,7 +36,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/login": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
+        // "/home": (context) => HomePage(),
+        MyRoutes.homeRoute : (context)=>HomePage(),
         "/login": (context) => LoginPage(),
       },
     );

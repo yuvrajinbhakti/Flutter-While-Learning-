@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../utils/widgets/drawer.dart';
+
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 final int days = 30;
@@ -13,8 +16,9 @@ final int days = 30;
       body: Center(
         child: Container(
           child: Text("Wow amazing . Keep on working hard. "),
-        )
-    )
+        ),
+    ),
+    drawer: MyDrawer(),
     );
   }
 }

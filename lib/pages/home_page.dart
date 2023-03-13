@@ -10,9 +10,17 @@ final int days = 30;
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
+      
       appBar: AppBar( 
         title: Text("Meri App "),
       ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   elevation:0.0,
+      //   iconTheme: IconThemeData(color: Colors.black),
+      //   title:Text("Meri App ",style:TextStyle(color:Colors.black)
+      //   ),
+      // )
       body: Center(
         child: Container(
           child: Text("Wow amazing . Keep on working hard. "),

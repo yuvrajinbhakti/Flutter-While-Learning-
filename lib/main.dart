@@ -16,13 +16,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       //  home: HomePage(),
+      //  home: HomePage(),
 
       //if we want to give property in light mode
-      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
 
-    debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
 
       //it is for dark mode
       // home: HomePage(),
@@ -31,14 +32,16 @@ class MyApp extends StatelessWidget {
       //   brightness: Brightness.dark,
       // ),
 
-      darkTheme:MyTheme.darkTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
 
-      initialRoute: MyRoutes.homeRoute,
+      // initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => LoginPage(),
         // "/home": (context) => HomePage(),
-        MyRoutes.homeRoute : (context)=>HomePage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
         // "/login": (context) => LoginPage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.cartRoute: (context) => CartPage(),
       },
     );

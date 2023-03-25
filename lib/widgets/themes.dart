@@ -12,10 +12,13 @@ class MyTheme {
       accentColor: darkBluishColor,
       // primaryTextTheme: GoogleFonts.latoTextTheme()
       appBarTheme: AppBarTheme(
-        color: Colors.white,
+        color: Colors.black,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
-        textTheme: Theme.of(context).textTheme,
+        iconTheme: IconThemeData(color: Colors.white),
+        // toolbarTextStyle: TextStyle(color:Colors.white),
+        textTheme: Theme.of(context)
+        .textTheme
+        .copyWith(headline6:context.textTheme.headline6?.copyWith(color: Colors.white)),
       ));
 
   // static ThemeData darkTheme(BuildContext context) => ThemeData(
@@ -34,6 +37,7 @@ class MyTheme {
         color: Colors.black,
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white),
         textTheme: Theme.of(context).textTheme,
       ));
 

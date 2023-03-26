@@ -5,11 +5,11 @@ import 'cart.dart';
 
 class CatalogModel {
 
-   static final catModel = CatalogModel._internal();
+  //  static final catModel = CatalogModel._internal();
 
-  CatalogModel._internal();
+  // CatalogModel._internal();
 
-  factory CatalogModel() => catModel;
+  // factory CatalogModel() => catModel;
 
   static List<Item> items = [];
 
@@ -32,6 +32,10 @@ class CatalogModel {
   //Get elemet by position
   // static Item getByPosition(int pos) => items[pos];
   Item getByPosition(int pos) => items[pos];
+
+  // static CatalogModel fromMap(Map<String, dynamic> map) {}
+
+  // toMap() {}
 }
 
 class Item {

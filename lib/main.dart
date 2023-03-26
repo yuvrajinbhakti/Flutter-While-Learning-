@@ -5,11 +5,17 @@ import 'package:flutter_application_1_from_basic/utils/routes.dart';
 import 'package:flutter_application_1_from_basic/widgets/themes.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
+import 'core/store.dart';
 import 'pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(VxState(store: MyStore(), child: MyApp()));
 }
+
+// void main() {
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

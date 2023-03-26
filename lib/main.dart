@@ -7,11 +7,21 @@ import 'package:flutter_application_1_from_basic/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'core/store.dart';
+import 'models/cart.dart';
+import 'models/catalog.dart';
 import 'pages/home_page.dart';
 
+// void main() {
+//   runApp(VxState(store: MyStore(), child: MyApp()));
+// }
+
 void main() {
-  runApp(VxState(store: MyStore(), child: MyApp()));
+  CatalogModel catalog = CatalogModel();
+  CartModel cart = CartModel();
+  MyStore myStore = MyStore(catalog, cart);
+  runApp(VxState(store: myStore, child: MyApp()));
 }
+
 
 // void main() {
 //   runApp(MyApp());

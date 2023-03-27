@@ -10,18 +10,19 @@ import 'core/store.dart';
 import 'models/cart.dart';
 import 'models/catalog.dart';
 import 'pages/home_page.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 // void main() {
 //   runApp(VxState(store: MyStore(), child: MyApp()));
 // }
 
 void main() {
+  usePathUrlStrategy();
   CatalogModel catalog = CatalogModel();
   CartModel cart = CartModel();
   MyStore myStore = MyStore(catalog, cart);
   runApp(VxState(store: myStore, child: MyApp()));
 }
-
 
 // void main() {
 //   runApp(MyApp());
